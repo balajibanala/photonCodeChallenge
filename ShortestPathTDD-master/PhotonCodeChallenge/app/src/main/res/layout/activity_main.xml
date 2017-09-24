@@ -33,7 +33,7 @@
         android:id="@+id/displayMatrix"
         android:layout_width="328dp"
         android:layout_height="146dp"
-        android:text="TextView"
+        android:text="Given Matrix"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -43,6 +43,7 @@
 
     <TextView
         android:id="@+id/displayOutput"
+        android:text="Output"
         android:layout_width="160dp"
         android:layout_height="115dp"
         android:layout_marginLeft="16dp"
@@ -60,7 +61,7 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:text="Shortest Path"
         android:onClick="getShortestRoute"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"

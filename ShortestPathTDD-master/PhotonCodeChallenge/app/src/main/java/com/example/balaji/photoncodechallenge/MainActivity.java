@@ -7,8 +7,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.example.balaji.photoncodechallenge.model.ShortestPath;
-
 public class MainActivity extends AppCompatActivity {
 
     EditText editText;
@@ -16,14 +14,14 @@ public class MainActivity extends AppCompatActivity {
     TextView displayMatrix;
     TextView displayOutput;
 
-    ShortestPath shortestPath;
+    ShortestRoute shortestRoute;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        shortestPath = new ShortestPath();
+        shortestRoute = new ShortestRoute();
 
          editText= (EditText) findViewById(R.id.inputString);
          button = (Button) findViewById(R.id.button);
@@ -33,7 +31,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void getShortestRoute(View v){
-        displayMatrix.setText(shortestPath.displayMatrix(shortestPath.createMatrix(editText.getText().toString())));
-        displayOutput.setText(shortestPath.shortestRoute(editText.getText().toString()));
+        String output = shortestRoute.getShortestRoute(editText.getText().toString());
+        displayMatrix.setText(shortestRoute.displayMatrix(shortestRoute.getInputMatrix()));
+        displayOutput.setText(output);
     }
 }
